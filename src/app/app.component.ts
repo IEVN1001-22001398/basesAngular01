@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { HeroesListComponent } from './heroes/heroes-list/heroes-list.component';
 
 @Component({
   selector: 'app-root',
@@ -18,6 +19,7 @@ pelicula={
   titulo:"El padrino",
   anio:1972,
   genero:"Crimen/Drama"
+
 }
 
 }
