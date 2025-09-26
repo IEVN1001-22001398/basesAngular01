@@ -1,0 +1,40 @@
+
+<div class="col-6">
+  <div class="mb-3">
+    <form>
+      <div class="form-group pt-4">
+
+        <div class="form-check">
+          <label for="nombre">Nombre</label>
+          <input type="text" class="form-control" id="nombre" [(ngModel)]="nombre" name="nombre">
+          
+          <label for="boletosCant">Cantidad de boletos:</label>
+          <input [(ngModel)]="boletosCant" name="boletosCant" type="text" class="form-control" id="num1" placeholder="Ingrese la cantidad de boletos"/>
+          
+          <div class="form-group pt-4">
+          <label for="compCant">Cantidad de Compradores:</label>
+          <input [(ngModel)]="compCant" name="compCant" type="text" class="form-control" id="compCant" placeholder="Ingrese la cantidad de compradores"/>
+          </div>
+
+          <label for="tarjetaCine">Tarjeta Cineco:</label>
+          <br>
+          <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="tarCineco" id="si" [value]="true" [(ngModel)]="tarCineco"/>
+          <label class="form-check-label" for="si">Sí</label>
+          </div>
+          <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="tarCineco" id="no" [value]="false" [(ngModel)]="tarCineco"/>
+          <label class="form-check-label" for="no">No</label>
+          </div>
+        </div>
+        <br />
+        
+        <button (click)="calcularBoletos()" type="button" class="btn btn-primary">comprar</button>
+      </div>
+      </form>
+    </div>
+    
+    <div class="col-6">
+      <h3>Usuario {{nombre}} vas a pagar un total de: {{totalPagar}}</h3>
+    </div>
+  </div>
